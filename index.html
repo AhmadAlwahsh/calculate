@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آلة الوحش</title>
+    <link rel="icon" href="https://ahmadalwahsh.netlify.app/logo2.png">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace
+      }
+      body {
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: space-around;
+      }
+      input {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: #1b5e20;
+        font-size: 20px;
+      }
+      button{
+        border: none;
+        outline: none;
+        background-color: #1b5e20;
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      h3{
+        color: white;
+        font-size: 30px;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inputs">
+      <input type="text" id="first-num" name="first-num" />
+      <input type="text" id="sec-num" name="sec-num" />
+    </div>
+    <div class="btns">
+      <button onclick="plus();">+</button>
+      <button onclick="minus();">-</button>
+      <button onclick="darb();">*</button>
+      <button onclick="qesma();">/</button>
+    </div>
+    <h3 id="result">النتيجة</h3>
+    <script>
+      const h3 = document.querySelector("h3");
+
+      const plus = () => {
+        h3.innerHTML =
+          Math.floor(document.getElementById("first-num").value) +
+          Math.floor(document.getElementById("sec-num").value);
+      };
+
+      const minus = () => {
+        h3.innerHTML =
+          Math.floor(document.getElementById("first-num").value) -
+          Math.floor(document.getElementById("sec-num").value);
+      };
+
+      const darb = () => {
+        h3.innerHTML =
+          Math.floor(document.getElementById("first-num").value) *
+          Math.floor(document.getElementById("sec-num").value);
+      };
+
+      const qesma = () => {
+        h3.innerHTML =
+          Math.floor(document.getElementById("first-num").value) /
+          Math.floor(document.getElementById("sec-num").value);
+      };
+    </script>
+  </body>
+</html>
